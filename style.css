@@ -1,0 +1,325 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #daf7dc;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.navigation__name h1 {
+	position: relative;
+	line-height: 50px;
+	margin: 0;
+	color: #2f4858;
+}
+
+.navigation {
+	height: 100%;
+	background-color: #9ee493;
+	margin-bottom: 0;
+}
+
+.navigation__logo--big {
+	margin: 0 auto;
+}
+
+.navigation__logo--big img {
+	width: 50px;
+	height: 50px;
+	padding: 5px 0;
+}
+
+.menu__item {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	float: right;
+}
+
+.menu__item li {
+	display: inline-block;
+	line-height: 50px;
+	padding: 0 20px;
+}
+
+.menu__item li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0 auto;
+	color: #2f4858;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.hero__image {
+	background-image: url("http://www.vectorsland.com/imgd/l90862-exotic-hotel-52613.jpg");
+	background-size: cover;
+	height: 100vh;
+}
+
+.gallery img {
+	width: 100%;
+	height: 230px;
+	float: left;
+	margin-bottom: 2%;
+}
+
+.gallery {
+	margin: 50px auto;
+	width: 100%;
+}
+
+h2 {
+	text-align: center;
+	color: #2f4858;
+}
+
+.gallery__column {
+	position: relative;
+	border: 1px solid #86bbd8;
+	margin-bottom: 3%;
+}
+
+.gallery__main {
+	margin: 1%;
+	cursor: pointer;
+}
+
+.gallery__layer {
+	background: rgba(255,255,255, 0.5);
+	height: 20%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: .5s ease;
+}
+
+.gallery__layer h4 {
+	color: #2f4858;
+	text-align: center;
+	margin: 10px auto;
+	font-weight: 900;
+	font-size: 1.2rem;
+}
+
+.contact {
+	margin-bottom: 50px;
+	color: #2f4858;
+}
+
+.contact_address {
+	padding-left: 10vw;
+}
+
+.contact_address--left {
+	text-align: right;
+	padding-right: 30px;
+	width: 100px;
+}
+
+.contact__map img {
+	width: 90%;
+	height: 100%;
+	margin-left: 10%;
+}
+
+.contact_address h2 {
+	float: left;
+	color: #2f4858;
+	margin-top: 0;
+}
+
+.footer {
+	text-align: center;
+	background-color: #9ee493; 
+	color: #2f4858;
+}
+/*for desktop */
+@media screen and (min-width: 1024px) {
+
+	.menu__item li a:hover {
+		color: #86bbd8;
+	}
+
+	.gallery__btn {
+		margin: 0 auto;
+		position: absolute;
+		bottom: 5%;
+		left: 33%;
+		visibility: hidden;
+		padding: 15px 35px;
+		border:none;
+		background-color: #2f4858;
+		color: #fff;
+		font-family: 'Architects Daughter', cursive;
+	}
+
+	.gallery [class*="col-"]:hover .gallery__layer {
+		background: rgba(255,255,255, 0.5);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+    	transform-origin: bottom;
+  		background: rgba(255,255,255, 0.5);
+    	transition: .5s ease;
+	}
+
+	.gallery [class*="col-"]:hover .gallery__btn {
+		visibility: visible;
+		transition-delay: .3s;
+		cursor: pointer;
+		animation: pulse 1s infinite;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.05);
+		} 
+		100% {
+			transform: scale(1);
+		}
+	}
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 1023px) { 
+
+	.navigation__name--medium h1 {
+		position: relative;
+		line-height: 50px;
+		margin: 0;
+		color: #2f4858;
+		font-size: 1rem;
+	}
+
+	.hero__image--medium {
+		background-image: url("http://www.vectorsland.com/imgd/l90862-exotic-hotel-52613.jpg");
+		background-size: cover;
+		height: 90vh;
+		width: 90vw;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.gallery img {
+		width: 100%;
+		height: 230px;
+		float: left;
+		margin-bottom: 2%;
+	}
+
+	.gallery [class*="col-"]:hover .gallery__layer {
+		background: rgba(255,255,255, 0.5);
+		height: 20%;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+    	transform-origin: bottom;
+  		background: rgba(255,255,255, 0.5);
+    	transition: .5s ease;
+	}
+
+	.gallery__btn {
+		display: none;
+	} 
+
+}
+/* for smartphones */
+@media screen and (max-width: 480px) {
+
+	.navigation {
+		height: 260px;
+		background-color: #9ee493;
+	}
+
+	.navigation__name--small {
+		display: block;
+		float: none;
+	}
+
+	.navigation__name--small h1 {
+		text-align: center;
+	}
+
+	.navigation__logo--small {
+		display: none;
+	}
+
+	.navigation__logo--small img {
+		display: none;
+	}
+
+	.navigation__menu--small {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.menu__item--small {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.menu__item--small li a {
+		text-decoration: none;
+		text-transform: uppercase;
+		margin: 0 auto;
+		color: #2f4858;
+		font-weight: bold;	
+	}
+
+	.menu__item--small li {
+		display: block;
+		line-height: 50px;
+		border-bottom: 1px solid #86bbd8;
+	}
+
+	.menu__item--small li:last-child {
+		border-bottom: 0;
+	}
+
+	.hero__image--small {
+		background-image: url("http://www.vectorsland.com/imgd/l90862-exotic-hotel-52613.jpg");
+		background-size: cover;
+		height: 50vh;
+		width: 90vw;
+		text-align: center;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.gallery [class*="col-"]:hover .gallery__layer {
+		background: rgba(255,255,255, 0.5);
+		height: 20%;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+    	transform-origin: bottom;
+  		background: rgba(255,255,255, 0.5);
+    	transition: .5s ease;
+	}
+	
+	.gallery__btn {
+		display: none;
+	} 
+
+	.contact__map--small img {
+		width: 90%;
+		height: 100%;
+		margin-left: 5%;
+		float: none;
+	}
+}
